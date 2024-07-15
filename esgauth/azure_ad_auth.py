@@ -86,8 +86,6 @@ class AzureADAuth:
             raise Exception(f"Failed to get RSA key: {str(e)}")
 
     def get_token_auth_header(self):
-        print('===== REQUEST HEADERS')
-        print(request.headers)
         auth = request.headers.get("Authorization", None)
         if not auth:
             raise Exception("Authorization header is expected")
