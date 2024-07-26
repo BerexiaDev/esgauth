@@ -12,4 +12,6 @@ setup(
     version='0.1',
     packages=find_packages(),
     install_requires=requires,
+    author='Yassine Bouhm',
+    author_email='yassinebouhm@gmail.com',
 )
