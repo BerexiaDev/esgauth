@@ -10,9 +10,10 @@ class AuthHelper:
             return {"status": "fail", "message": "No email found"}, 400
         
         user = MongoDB.get_user({'email': user_email})
-        g.auth_user = user
         
         if not user:
             return {"status": "fail", "message": "No such user with the provided email"}, 404
+
+        g.auth_user = user
 
         return user, 200
